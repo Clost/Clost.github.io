@@ -1,0 +1,54 @@
+body:not(h2) {
+    color: rgb(64, 64, 64);
+    font-size: 11pt;
+    font-family: Georgia, Garamond, sans-serif;
+    line-height: 20px;
+}
+
+.container {
+    width: 55%;
+    margin: 0 auto;
+}
+
+section h2 {
+    color: #A4A400;
+    text-decoration: underline;
+    font-family: 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+}
+
+section h2:not(#meringue_pie h2) {
+    font-size: 18pt;
+    font-weight: normal;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#meringue_pie h2 {
+    font-size: 22pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+section blockquote {
+    font-style: italic;
+    background-color: #FFFFA8;
+}
+
+section li span {
+    font-weight: bold;
+}
+
+pre {
+    text-align: right;
+    font-family: monospace;
+}
+
+.links li {
+    list-style-type: none;
+}
+
+.links a {
+    color: #A4A400
+}
