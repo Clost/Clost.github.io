@@ -9,7 +9,7 @@ body {
 }
 
 #banner_img {
-    background-image: url('./images/bannerbg.png');
+    background-image: url('../images/bannerbg.png');
     background-repeat: repeat-x;
     height: 50px;
 }
@@ -22,7 +22,7 @@ body {
 }
 
 .wrapper {
-    background-image: url('./images/background.png');
+    background-image: url('../images/background.png');
     overflow: hidden;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 .rotten {
-    background-image: url('./images/rbg.png');
+    background-image: url('../images/rbg.png');
     background-repeat: repeat-x;
     border-top-left-radius: 18px;
     position: relative;
