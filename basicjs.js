@@ -12,6 +12,7 @@ function max(a, b)
     else return b;
 }
 
+
 //findind the max of Three
 function maxOfThree(a,b,c)
 {
