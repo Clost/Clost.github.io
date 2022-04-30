@@ -1,9 +1,21 @@
+const objectsEqual = (o1, o2) =>
+    Object.keys(o1).length === Object.keys(o2).length
+    && Object.keys(o1).every(p => o1[p] === o2[p]);
 
-//testing the function
+//testing the functions
 function testFunction(expected, get) {
     if (expected == get()) return 'TEST SUCCEEDED';
     else return 'TEST FAILED. Expected ' + expected + ' found ' + get();
 }
+
+function testFunctionForArray(expected, found) {
+    const result= objectsEqual(expected, found)
+         if (result==true) {
+            return "TEST SUCCEEDED";
+        } else {
+            return "TEST FAILED.  Expected " + expected + " found " + found;
+        }
+    }
 
 //finding the max value
 function max(a, b) 
@@ -82,6 +94,11 @@ function filterLongWords(arr, i) {
     return newArray;
 }
 
+document.writeln("<h2>Basic JS</h2><br/>");
+
+const a = [1, 3, 5, 3, 3];
+document.writeln("Array a: [" + a + "]<br/><br/>");
+
 //using map to change all element of an array
 function map(a) {
 
@@ -91,6 +108,9 @@ function map(a) {
 
 }
 
+const x = map(a)
+document.writeln("Multiply each element by 10 with map: [" + x + "]<br/><br/>");
+
 //using filter to filter through an array
 function filter(a) {
     return a.filter(function (elem, i, array) {
@@ -98,12 +118,20 @@ function filter(a) {
     });
 }
 
+const y = filter(a)
+document.writeln("Filter element equal to 3: [" + y + "]<br/><br/>");
+
+
 //using reduce to add all element of an array
 function reduce(a) {
     return a.reduce(function (prevValue, elem, i, array) {
         return prevValue + elem;
     });
 }
+
+const z = reduce(a)
+document.writeln("Sum of all elements with reduce: " + z + "<br/><br/>");
+
 //testing all the functions above
 
 console.log("Expected output of max(20,10) is 20 and  " + testFunction(20, function () {
@@ -136,18 +164,17 @@ console.log("Expected output of findLongestWord(['testar', 'Hello', 'Hi']) is 6 
     return findLongestWord(['testar', 'Hello', 'Hi']);
 }));
 
-console.log("Expected output of filterLongWords(['as','bcde','uhher'],3) is 'bcde','uhher'and  " + testFunction(['as','uhher'], function () {
-    return filterLongWords(['as', 'bcde', 'uhher'], 3);
-}));
+console.log("Expected output of filterLongWords(['as','vvgt','boom'],3) is 'vvgt','boom'and  " + testFunctionForArray(["vvgt","boom"],
+     filterLongWords(['as', 'vvgt', 'boom'], 3)));
 
-console.log("Expected output of map([1,3,5,3,3]) is 10,30,50,30,30 and  " + testFunction([10, 30, 50, 30, 30], function () {
+console.log("Expected output of map([1,3,5,3,3]) is 10,30,50,30,30 and  " + testFunctionForArray(10, 30, 50, 30, 30, function () {
     return map([1, 3, 5, 3, 3]);
 }));
 
-console.log("Expected output of filter([1,3,5,3,3]) is 3,3,3 and  " + testFunction([3, 3, 3], function () {
+console.log("Expected output of filter([1,3,5,3,3]) is 3,3,3 and  " + testFunctionForArray(3, 3, 3, function () {
     return filter([1, 3, 5, 3, 3]);
 }));
 
-console.log("Expected output of reduce([1,3,5,3,3]) is and 15 " + testFunction(15, function () {
+console.log("Expected output of reduce([1,3,5,3,3]) is and 15 " + testFunctionForArray(15, function () {
     return reduce([1, 3, 5, 3, 3]);
 }));
