@@ -29,10 +29,10 @@ let start = function()
 
     if(document.getElementById("start").disabled==false)
     {
-        document.getElementById("start").disabled==true;
+        document.getElementById("start").disabled=true;
         if(document.getElementById("stop").disabled==true)
         {
-            document.getElementById("stop").disabled==false;
+            document.getElementById("stop").disabled=false;
         }
 
         animFrame = animation.split("=====\n");
@@ -44,19 +44,12 @@ let stop= function ()
 {
     if(document.getElementById("stop").disabled==false)
     {
-        document.getElementById("stop").disabled==true;
-        document.getElementById("start").disabled==false;
+        document.getElementById("stop").disabled=true;
+        document.getElementById("start").disabled=false;
         
         clearInterval(animTimer);
         document.getElementById("text-area").value="";
     }
-}
-
-let fontSize = function()
-{
-    let textArea= document.getElementById("text-area");
-    let fontSize= document.getElementById("fontsize").value;
-    textArea.style.fontSize= fontSize;
 }
 
 let changeAnim = function()
@@ -65,6 +58,13 @@ let changeAnim = function()
     let animSelected= document.getElementById("animation").value;
     animation = ANIMATIONS[animSelected];
     document.getElementById("text-area").value="";
+}
+
+let fontsize = function()
+{
+    let textArea= document.getElementById("text-area");
+    let fontsize= document.getElementById("fontsize").value;
+    textArea.style.fontsize= fontsize;
 }
 
 let turbo = function()
@@ -80,7 +80,7 @@ function main() {
     document.getElementById("start").onclick = start;
     document.getElementById("stop").onclick = stop;
     document.getElementById("animation").onchange = changeAnim;
-    document.getElementById("fontsize").onchange = fontSize;
+    document.getElementById("fontsize").onchange = fontsize;
     document.getElementById("turbo").onchange = turbo;
 }
 
