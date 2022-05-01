@@ -85,6 +85,17 @@ function findLongestWord(arr)
   return longestWord;
 }
 
+function shortest(str1,str2,str3)
+{
+   if(str1.length<=str2.length && str1.length<=str3.length)
+    return str1;
+    else if(str2.length<=str1.length && str2.length<=str3.length)
+    return str2;
+    else
+    return str3;
+    
+}
+
 //filter words by a specific length
 function filterLongWords(arr, i) {
     var newArray = [];
@@ -162,6 +173,10 @@ console.log("Expected output of reverse('jag testar') is ratset gaj and " +testF
 
 console.log("Expected output of findLongestWord(['testar', 'Hello', 'Hi']) is 6 and " +testFunction(6, function(){
     return findLongestWord(['testar', 'Hello', 'Hi']);
+}));
+
+console.log("Expected output of findLongestWord(['testar', 'Hello', 'Hi']) is 6 and " +testFunction(6, function(){
+    return shortest("testar", "Hello", "Hi");
 }));
 
 console.log("Expected output of filterLongWords(['as','vvgt','boom'],3) is 'vvgt','boom'and  " + testFunctionForArray(["vvgt","boom"],
