@@ -50,7 +50,7 @@ let stop= function ()
         clearInterval(animTimer);
         document.getElementById("text-area").value="";
     }
-}
+} 
 
 let changeAnim = function()
 {
@@ -64,8 +64,9 @@ let fontsize = function()
 {
     let textArea= document.getElementById("text-area");
     let fontsize= document.getElementById("fontsize").value;
-    textArea.style.fontsize= fontsize;
+    textArea.style.fontSize= fontsize;
 }
+
 
 let turbo = function()
 {
