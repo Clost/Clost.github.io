@@ -1,26 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name=viewport content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/responsive.css">
-        <title>Responsive Page</title>
-    </head>
-    <body>
-        <header>HEADER</header>
-            <nav>  
-                <div>Menu1</div>
-                <div>Menu2</div>
-                <div>Menu3</div></nav>
-        <div class="container">
-            
-            <aside class="left-sidebar">Column1</aside>
-            <aside class="right-sidebar">Column3</aside>
-            <main>Column2</main>
-        </div>
-            <footer>FOOTER</footer>  
-    </div>
-    
-   
+<html>
+
+<head>
+<title>W2D1 Quiz</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+<script>
+// initialize mocha
+mocha.setup('bdd');
+// chai has a lot of stuff, let's make assert global
+let assert = chai.assert;
+
+</script>
+
+<script>
+// write your code for the function earliestSpace() here
+// remember it has to take 3 strings, not an array!
+
+function earliestSpace(str1, str2, str3) {
+      let char= " ";
+      let result = str1;
+      if(result.indexOf(char) > str2.indexOf(char)) {
+        res = str2;
+      }
+
+      else if(result.indexOf(char) > str3.indexOf(char)) {
+        res = str3;
+      }
       
-    </body>
+      return result
+}
+</script>
+<script>
+describe("earliestSpace", function () {
+it("takes 3 strings, and returns whicherver string has a space character at the lowest index",
+function () {
+assert.equal("bla bla bla", earliestSpace("This is a test", "Where it checks for spaces",
+"bla bla bla"));
+});
+});
+
+</script>
+</head>
+
+<body>
+<div id="mocha"></div>
+<script>
+mocha.run();
+
+</script>
+</body>
+
 </html>

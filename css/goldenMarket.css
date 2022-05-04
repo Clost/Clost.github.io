@@ -1,0 +1,16 @@
+.signt {
+    position: absolute; 
+    top: 20px; 
+    right: 150px; 
+    font-size: 18px; 
+    color: #fff;
+}
+
+#form-buttons {
+    text-align: right;
+}
+
+.border-md-right {
+    border-left: 1px solid silver;
+    padding: 0 30px;   
+}
