@@ -1,0 +1,27 @@
+//Using Object.create()
+
+var Animal = {
+    species:'',
+    makeNoise: function(){
+        console.log("The" + this.species + "makes a noise");
+    }
+}
+
+var Pet = Object.create(Animal);
+
+Pet.name='default';
+Pet.play= function(){
+    console.log("");
+}
+
+var dog= Object.create(Pet);
+dog.name = "fido";
+dog.species= "DOg";
+dog.makeNoise();
+dog.play();
+
+var dog= Object.create(Pet);
+dog.name = "Mimi";
+dog.species= "Cat";
+dog.makeNoise();
+dog.play();
