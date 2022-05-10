@@ -28,7 +28,10 @@ Array.prototype.bubbleSort = function(){
     return arr;
 }
 
-console.log([6,4,0,3,-2,1].bubbleSort());
+let arr = [6, 4, 0, 3, -2, 1];
+
+
+console.log(arr.bubbleSort());
 /************************************************************************************************************ */
 
 //Exercice 3
@@ -64,9 +67,9 @@ var Teacher = function(){};
 
  Teacher.prototype.teach = function(subject)
  {
-     console.log(this.name + " is now teaching "+ subject);
+     return this.name + " is now teaching "+ subject;
  }
 
  var tc= new Teacher();
  tc.initialize("Mohammed", 30);
- tc.teach("WAP");
+ console.log(tc.teach("WAP"));
