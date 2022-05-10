@@ -3,7 +3,7 @@ window.onload = function(){
 }
 
 function tester(){
-    describe("This is the test for the Lab Exercise of Part 1 - Prototype Methods", () => {
+    describe("Prototype Methods", () => {
         it("Should return Rabbit, because the value of this is the Rabbit, behind the dot", () =>{
             assert.equal(rabbit.sayHi(), "Rabbit")
         })
