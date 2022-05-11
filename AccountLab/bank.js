@@ -24,7 +24,7 @@ class Bank{
     }
 
     closeAccount(number){
-        let accounts = this._accounts.filter(acc => acc.getNumber() === number);
+        let accounts = this._accounts.filter(acc => acc.getNumber() !== number);
         this._accounts = accounts;
     }
 
