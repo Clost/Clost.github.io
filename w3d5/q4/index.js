@@ -5,7 +5,6 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use('/css', express.static(path.join(__dirname, 'css')));
 
-
 const date = new Date();
 const hr = date.getHours();
 const cssF = hr > 18 && hr < 6 ? "css/day.css": "css/night.css";
